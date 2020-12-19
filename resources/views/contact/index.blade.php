@@ -32,6 +32,7 @@
                             <th scope="col">氏名</th>
                             <th scope="col">件名</th>
                             <th scope="col">登録日時</th>
+                            <th scope="col">詳細</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -41,7 +42,8 @@
                         <th>{{ $contact->your_name}}</th>
                         <th>{{ $contact->title}}</th>
                         <th>{{ $contact->created_at}}</th>
-                        </th>
+                        <td><a href="{{ route('contact.show', ['id' => $contact->id])}}">詳細をみる</a></td>
+                        </tr>
                         @endforeach
                         </tbody>
                     </table>
