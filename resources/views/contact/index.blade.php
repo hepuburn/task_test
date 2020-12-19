@@ -19,7 +19,32 @@
                     </button>
                     </form>
                     
-                    indexです
+                    @foreach($contacts as $contact)
+                    {{ $contact->id}}
+                    {{ $contact->your_name}}
+                    {{ $contact->title}}
+                    {{ $contact->created_at}}
+                    @endforeach
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">氏名</th>
+                            <th scope="col">件名</th>
+                            <th scope="col">登録日時</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($contacts as $contact)
+                        <tr>
+                        <th>{{ $contact->id}}</th>
+                        <th>{{ $contact->your_name}}</th>
+                        <th>{{ $contact->title}}</th>
+                        <th>{{ $contact->created_at}}</th>
+                        </th>
+                        @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
