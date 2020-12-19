@@ -19,12 +19,6 @@
                     </button>
                     </form>
                     
-                    @foreach($contacts as $contact)
-                    {{ $contact->id}}
-                    {{ $contact->your_name}}
-                    {{ $contact->title}}
-                    {{ $contact->created_at}}
-                    @endforeach
                     <table class="table">
                         <thead>
                             <tr>
@@ -47,6 +41,7 @@
                         @endforeach
                         </tbody>
                     </table>
+                    {{ $contacts->links() }}
                 </div>
             </div>
         </div>
